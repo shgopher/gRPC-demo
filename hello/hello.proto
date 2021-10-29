@@ -1,1 +1,18 @@
+syntax = "proto3";
+// 配置 .pb.go的位置
+option go_package = "github.com/shgopher/gRPC-demo/hello";
+// 配置 go文件的包名
+package hello;
 
+// 定义服务定义
+service Greeter {
+  rpc SayHi(helloRequest) returns (apply){}
+}
+// 定义传入值
+message helloRequest {
+string name = 1;
+}
+// 定义传出值
+message apply {
+string message =1;
+}
