@@ -6,13 +6,13 @@ package hello;
 
 // 定义服务定义
 service Greeter {
-  rpc SayHi(helloRequest) returns (apply){}
+  rpc SayHi(HelloRequest) returns (Apply){}
 }
 // 定义传入值
-message helloRequest {
+message HelloRequest {
 string name = 1;
 }
 // 定义传出值
-message apply {
-string message =1;
+message Apply {
+string message = 1;
 }
